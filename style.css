@@ -74,13 +74,13 @@ header button{
 
 
 /* Main section */
-main{
-    background: linear-gradient(0deg, rgba(0, 0, 0, 0.9) -11.44%, rgba(0, 0, 0, 0) 39.97%),  url(./images/dog-rex.jpg);
-    /* background-image: url(./images/dog-rex.jpg);
-    background-size: cover;
+#main{
+    /* background: linear-gradient(0deg, rgba(0, 0, 0, 0.9) -11.44%, rgba(0, 0, 0, 0) 39.97%),url();
+     background-image: url(./images/dog-rex.jpg); */
+    background-size: contain;
     background-blend-mode:overlay;
     background-repeat: no-repeat;
-    background-position: top center; */
+    background-position: top center;
     /* background-blend-mode: multiply; */
     min-height: 70vh;
     padding: 0 0.5em;
@@ -90,7 +90,7 @@ main{
     justify-content: space-between;
 }
 
-main .badge{
+#main #badge{
     /* background-color: #F83375; */
     max-width: 200px;
     transform: rotate(-30deg);
@@ -98,7 +98,7 @@ main .badge{
 }
 
 /* .badge-like, */
-.badge-nope{
+#badge-nope{
     display: none;
 }
 
@@ -124,16 +124,16 @@ footer button{
     border: none;
 }
 
-.btn-cross{
+#btn-cross{
     margin-right: 25px;
 }
 
-.btn-cross:hover,
-.btn-cross:focus{
+#btn-cross:hover,
+#btn-cross:focus{
     background: #FFE7EF;
 }
-.btn-heart:hover,
-.btn-heart:focus{
+#btn-heart:hover,
+#btn-heart:focus{
     background: #DBFFF4;
 }
 
