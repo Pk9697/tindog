@@ -1,0 +1,141 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    margin: 0;
+    background: #FFFFFF;
+    font-family: 'Poppins', sans-serif;
+    /* line-height: 36px; */
+}
+
+img{
+    max-width: 100%;
+    color: #FFFFFF;
+}
+
+button{
+    cursor: pointer;
+}
+/* Typography */
+h1{
+    color: #F8F8F8;
+    font-weight: 600;
+}
+
+h2{
+    margin-top: 0;
+    color: #B7B7B7;
+    font-weight: 400;
+    /* background-color: black; */
+    /* background-blend-mode: ; */
+}
+
+
+/* ******** 
+    Layout 
+************/
+.container{
+    max-width:550px;
+    /* height: 100px; */
+    /* background-color: blue; */
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    min-height: 100vh;
+    /* background: linear-gradient(180deg, #FFFFFF 0%, #F6F7FB 100%); */
+    padding:0 0.5em;
+
+
+}
+
+
+
+
+/* Header section */
+header{
+    /* background-color: aquamarine; */
+    display: flex;
+    justify-content: space-between;
+}
+header button{
+    background-color: #FFFFFF;
+    max-width: 40px;
+    border: none;
+}
+
+.logo{
+    min-width: 80px;
+    padding: 0.5em 2em;
+    /* background: linear-gradient(); */
+    background: linear-gradient(270deg, #FA695A 0%, #F83375 100%);
+    border-radius: 30px;
+}
+
+
+/* Main section */
+main{
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.9) -11.44%, rgba(0, 0, 0, 0) 39.97%),  url(./images/dog-rex.jpg);
+    /* background-image: url(./images/dog-rex.jpg);
+    background-size: cover;
+    background-blend-mode:overlay;
+    background-repeat: no-repeat;
+    background-position: top center; */
+    /* background-blend-mode: multiply; */
+    min-height: 70vh;
+    padding: 0 0.5em;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+main .badge{
+    /* background-color: #F83375; */
+    max-width: 200px;
+    transform: rotate(-30deg);
+    margin: 50px 0 0 10px;
+}
+
+/* .badge-like, */
+.badge-nope{
+    display: none;
+}
+
+/* Footer section */
+
+footer{
+    display: flex;
+    justify-content: center;
+}
+
+footer img{
+    max-width: 25px;
+}
+
+/* Buttons */
+
+footer button{
+    max-width: 90px;
+    padding: 30px;
+    border-radius: 50%;
+    background: #FFFFFF;
+    box-shadow: 0px 10px 20px #E9E9EA;
+    border: none;
+}
+
+.btn-cross{
+    margin-right: 25px;
+}
+
+.btn-cross:hover,
+.btn-cross:focus{
+    background: #FFE7EF;
+}
+.btn-heart:hover,
+.btn-heart:focus{
+    background: #DBFFF4;
+}
+
+
+
