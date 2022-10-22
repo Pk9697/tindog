@@ -14,8 +14,8 @@ function renderEndGame(){
         <h1>No more dogs in your area! Check Back later</h1>
     `
 
-    document.getElementById('main').style.backgroundImage=`none`
-    document.getElementById('main').style.backgroundColor=`green`
+    // document.getElementById('main').style.backgroundImage=`none`
+    document.getElementById('main').style.background=`linear-gradient(270deg, #FA695A 0%, #F83375 100%)`
     document.getElementById('main').classList.add('main-flex-end')
 }
 
