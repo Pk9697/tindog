@@ -77,17 +77,28 @@ header button{
 #main{
     /* background: linear-gradient(0deg, rgba(0, 0, 0, 0.9) -11.44%, rgba(0, 0, 0, 0) 39.97%),url();
      background-image: url(./images/dog-rex.jpg); */
-    background-size: contain;
+    /* background-size: contain;
     background-blend-mode:overlay;
     background-repeat: no-repeat;
-    background-position: top center;
+    background-position: top center; */
     /* background-blend-mode: multiply; */
     min-height: 70vh;
     padding: 0 0.5em;
     border-radius: 15px;
+    
+}
+
+.main-flex{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+}
+
+.main-flex-end{
+    justify-content: center;
+    /* align-items: center; */
+    text-align: center;
+    /* color: black; */
 }
 
 #main #badge{
@@ -97,7 +108,7 @@ header button{
     margin: 50px 0 0 10px;
 }
 
-/* .badge-like, */
+#badge-like,
 #badge-nope{
     display: none;
 }

@@ -9,6 +9,16 @@ function getNewDog(){
     return newDogData? new Dog(newDogData):{}
 }
 
+function renderEndGame(){
+    document.getElementById('main').innerHTML=`
+        <h1>No more dogs in your area! Check Back later</h1>
+    `
+
+    document.getElementById('main').style.backgroundImage=`none`
+    document.getElementById('main').style.backgroundColor=`green`
+    document.getElementById('main').classList.add('main-flex-end')
+}
+
 function likeCurrentDog(){
     if(!isWaiting){
         // document.getElementById('badge').innerHTML=newDog.getLikeHtml()
@@ -16,13 +26,19 @@ function likeCurrentDog(){
         newDog.setHasBeenSwiped()
         newDog.setHasBeenLiked()
         console.log(newDog)
-        render()
+        // render()
+        document.getElementById('badge-like').style.display='block'
         if(dogsData.length>0){
             setTimeout(()=>{
                 newDog=getNewDog()
                 render()
                 isWaiting=false
+                document.getElementById('badge-like').style.display='none'
             },1500)
+        }else{
+            setTimeout(()=>{
+                renderEndGame()
+            },1000)
         }
     }
 }
@@ -35,20 +51,27 @@ function rejectCurrentDog(){
         newDog.setHasBeenSwiped()
         newDog.setHasBeenRejected()
         console.log(newDog)
-        render()
+        // render()
+        document.getElementById('badge-nope').style.display='block'
+
         if(dogsData.length>0){
             setTimeout(()=>{
                 newDog=getNewDog()
                 render()
                 isWaiting=false
+                document.getElementById('badge-nope').style.display='none'
             },1500)
+        }else{
+            setTimeout(()=>{
+                renderEndGame()
+            },1000)
         }
     }
 }
 
 
 function render(){
-    document.getElementById('main').innerHTML=newDog.getDogHtml()
+    document.getElementById('card').innerHTML=newDog.getDogHtml()
     // document.getElementById('main').style.backgroundImage=`url(${newDog.getDogBackgroundImage()})`;
     document.getElementById('main').style.background=`linear-gradient(0deg, rgba(0, 0, 0, 0.9) -11.44%, rgba(0, 0, 0, 0) 39.97%),url(${newDog.getDogBackgroundImage()}) no-repeat center center/cover`;
 }
